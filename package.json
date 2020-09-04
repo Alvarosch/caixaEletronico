@@ -1,0 +1,23 @@
+{
+  "name": "caixa_eletronico",
+  "version": "0.0.1",
+  "description": "programa para saque de valores em caixa eletronico",
+  "main": "inicio.js",
+  "scripts": {
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- tests/test.js",
+    "test_reports": "mocha -t 15000 -R xunit > ../test-reports-manager.xml"
+  },
+  "author": "Alvaro",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^4.3.0",
+	"body-parser": "^1.17.2"
+  },
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "mocha": "^2.2.5",
+	"istanbul": "^0.3.14",
+    "restify": "^4.3.0",
+	"body-parser": "^1.17.2"
+  }
+}
