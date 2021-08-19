@@ -2,7 +2,9 @@
 
 ## Requisitos
  Angular CLI vsersão 12.2.1.
+ 
  Node versão 16.7.0
+ 
  Npm versão 7.20.3
 
 ## Instalação
