@@ -1,0 +1,37 @@
+<form (submit)="$event.preventDefault()">
+    <mat-form-field appearance="fill">
+      <mat-label>Valor do Saque</mat-label>
+      <input matInput  [(ngModel)]="valor" name="valor" [value]="valor" (cdkAutofill)="saqueAutofilled = $event.isAutofilled">
+      <mat-hint *ngIf="saqueAutofilled">Autofilled!</mat-hint>
+    </mat-form-field>
+    <button mat-raised-button (click)="evento()">Sacar</button>
+    <BR>
+    <mat-form-field appearance="fill">
+        <mat-label>Notas de 100</mat-label>
+        <input matInput  [(ngModel)]="qtdNota100" name="qtdNota100" [value]="qtdNota100" (cdkAutofill)="saqueAutofilled = $event.isAutofilled">
+        <mat-hint *ngIf="saqueAutofilled">Autofilled!</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Notas de 50</mat-label>
+        <input matInput  [(ngModel)]="qtdNota50" name="qtdNota50" [value]="qtdNota50" (cdkAutofill)="saqueAutofilled = $event.isAutofilled">
+        <mat-hint *ngIf="saqueAutofilled">Autofilled!</mat-hint>
+      </mat-form-field>
+      <BR>
+      <mat-form-field appearance="fill">
+        <mat-label>Notas de 20</mat-label>
+        <input matInput  [(ngModel)]="qtdNota20" name="qtdNota20" [value]="qtdNota20" (cdkAutofill)="saqueAutofilled = $event.isAutofilled">
+        <mat-hint *ngIf="saqueAutofilled">Autofilled!</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Notas de 10</mat-label>
+        <input matInput  [(ngModel)]="qtdNota10" name="qtdNota10" [value]="qtdNota10" (cdkAutofill)="saqueAutofilled = $event.isAutofilled">
+        <mat-hint *ngIf="saqueAutofilled">Autofilled!</mat-hint>
+      </mat-form-field>
+      <BR>
+        <mat-form-field appearance="fill">
+            <mat-label>Falha</mat-label>
+            <input matInput  [(ngModel)]="falha" name="falha" [value]="falha" (cdkAutofill)="saqueAutofilled = $event.isAutofilled">
+            <mat-hint *ngIf="saqueAutofilled">Autofilled!</mat-hint>
+          </mat-form-field>
+    
+  </form>
