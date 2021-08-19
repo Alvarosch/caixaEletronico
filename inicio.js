@@ -34,6 +34,16 @@ restserver.prototype.start = function(){
     next();
   });
 
+  this.server.use(restify.CORS());
+
+  this.server.opts(/.*/, function (req,res,next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", req.header("Access-Control-Request-Method"));
+    res.header("Access-Control-Allow-Headers", req.header("Access-Control-Request-Headers"));
+    res.send(200);
+    return next();
+});
+
   this.server.on('InternalError', function(req, res, err, cb) {
     console.log('InternalError', err);
     if(!res.headersSent){
